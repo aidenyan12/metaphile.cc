@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  background-color: hsl(var(--background));
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+@layer base {
+  :root,
+  :root.dark,
+  .dark {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 97%;
+    --border: 0 0% 20%;
+    --input: 0 0% 14%;
+    --ring: 0 0% 90%;
+    --primary: 0 0% 97%;
+    --primary-foreground: 0 0% 5%;
+    --secondary: 0 0% 11%;
+    --secondary-foreground: 0 0% 97%;
+    --destructive: 0 72% 52%;
+    --destructive-foreground: 0 0% 98%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 68%;
+    --accent: 0 0% 11%;
+    --accent-foreground: 0 0% 97%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 97%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 97%;
+    --radius: 0.75rem;
+    --hashtag-bg: 0 0% 11%;
+    --hashtag-text: 0 0% 68%;
+    --hashtag-hover-bg: 0 0% 18%;
+    --hashtag-hover-text: 0 0% 97%;
+    --hashtag-active-bg: 0 0% 97%;
+    --hashtag-active-text: 0 0% 6%;
+  }
+
+  :root[data-theme="light"],
+  :root.light,
+  .light {
+    --background: 0 0% 96%;
+    --foreground: 0 0% 8%;
+    --border: 0 0% 84%;
+    --input: 0 0% 88%;
+    --ring: 0 0% 12%;
+    --primary: 0 0% 8%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 90%;
+    --secondary-foreground: 0 0% 10%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --muted: 0 0% 91%;
+    --muted-foreground: 0 0% 36%;
+    --accent: 0 0% 90%;
+    --accent-foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --hashtag-bg: 0 0% 90%;
+    --hashtag-text: 0 0% 36%;
+    --hashtag-hover-bg: 0 0% 84%;
+    --hashtag-hover-text: 0 0% 10%;
+    --hashtag-active-bg: 0 0% 10%;
+    --hashtag-active-text: 0 0% 98%;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "DM Sans", sans-serif;
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .hashtag {
+    @apply inline-flex cursor-pointer items-center rounded-full border border-transparent px-3 py-1.5 text-xs font-medium transition-all duration-200;
+    background-color: hsl(var(--hashtag-bg));
+    color: hsl(var(--hashtag-text));
+  }
+
+  .hashtag:hover {
+    background-color: hsl(var(--hashtag-hover-bg));
+    color: hsl(var(--hashtag-hover-text));
+  }
+
+  .hashtag.active {
+    background-color: hsl(var(--hashtag-active-bg));
+    color: hsl(var(--hashtag-active-text));
+    @apply scale-105 shadow-md;
+  }
+}
+
+@layer utilities {
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  .smooth-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}

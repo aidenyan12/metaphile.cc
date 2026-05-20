@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Collaboration Matter | Metaphile</title>
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('site-theme');
+        if (t === 'light') document.body.setAttribute('data-theme', 'light');
+      } catch(e) {}
+    })();
+  </script>
+  <meta name="description" content="Contact Metaphile for collaboration enquiries, partnerships, and project conversations in Hong Kong and beyond." />
+  <link rel="stylesheet" href="/contact/contact-v4.css?v=20260328-theme-fix1" />
+  <style>
+    .lang-toggle {
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.06);
+      color: #f5f5f5;
+      border-radius: 999px;
+      width: 48px;
+      height: 40px;
+      padding: 0;
+      display: inline-grid;
+      place-items: center;
+      font-size: 0.78rem;
+      font-weight: 700;
+      line-height: 1;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+      transition: transform 160ms ease, opacity 160ms ease,
+        background-color 220ms ease, color 220ms ease, border-color 220ms ease;
+    }
+    .lang-toggle:hover { opacity: 0.85; transform: translateY(-1px); }
+    body[data-theme="light"] .lang-toggle {
+      background: rgba(17,17,17,0.14);
+      color: #111;
+      border-color: rgba(17,17,17,0.28);
+    }
+  </style>
+</head>
+<body>
+  <main class="contact-page">
+    <header class="contact-topbar">
+      <a class="contact-brand" href="/">METAPHILE</a>
+      <div class="contact-tools">
+        <nav class="contact-nav" aria-label="Primary">
+          <a href="/" data-i18n="nav_home">Home</a>
+          <a href="/gallery/" data-i18n="nav_gallery">Gallery</a>
+          <a href="/contact/" data-i18n="nav_contact" aria-current="page">Contact</a>
+        </nav>
+        <form class="contact-search" action="/gallery/" method="get">
+          <input type="search" name="q" placeholder="Search projects" data-i18n-placeholder="search_placeholder" aria-label="Search projects" />
+          <button type="submit" aria-label="Search gallery">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"></circle>
+              <path d="M16 16L21 21" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+            </svg>
+          </button>
+        </form>
+        <a class="contact-social" href="https://www.instagram.com/meta.phile" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="aria_instagram" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"></rect>
+            <circle cx="12" cy="12" r="3.8" fill="none" stroke="currentColor" stroke-width="1.7"></circle>
+            <circle cx="17.4" cy="6.7" r="1.1" fill="currentColor"></circle>
+          </svg>
+        </a>
+        <button id="lang-toggle" class="lang-toggle" type="button" data-i18n-aria-label="aria_lang_toggle" aria-label="Switch to Chinese">中文</button>
+        <button id="theme-toggle" class="theme-toggle" type="button" data-i18n-aria-label="aria_theme_toggle" aria-label="Switch to light mode" title="Switch theme">
+          <span id="theme-icon" aria-hidden="true">☀</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="contact-details">
+      <div class="contact-column intro-column">
+        <p class="contact-label" data-i18n="enquiries_label">Enquiries</p>
+        <h2 data-i18n="h2_main">Let's talk about your next collaboration.</h2>
+        <p data-i18n="p_intro">
+          Share a short outline of your project, the kind of support you need, and your preferred timeline. We can then move
+          the conversation forward by email.
+        </p>
+        <div class="contact-actions">
+          <a class="contact-button primary" href="mailto:metaphile12@gmail.com?subject=Collaboration%20Enquiry" data-i18n="btn_email">Email Metaphile</a>
+          <a class="contact-button secondary" href="https://www.instagram.com/meta.phile" target="_blank" rel="noopener noreferrer" data-i18n="btn_instagram">Instagram</a>
+        </div>
+      </div>
+
+      <div class="contact-column info-column">
+        <div class="contact-item">
+          <p class="contact-label" data-i18n="email_label">Email</p>
+          <a href="mailto:metaphile12@gmail.com">metaphile12@gmail.com</a>
+        </div>
+
+        <div class="contact-item">
+          <p class="contact-label" data-i18n="address_label">Address</p>
+          <address>
+            Unit 12, 21/F., Wayson Commercial Building<br />
+            No. 28 Connaught Road West<br />
+            Sheung Wan, Hong Kong
+          </address>
+        </div>
+
+        <div class="contact-item">
+          <p class="contact-label" data-i18n="instagram_label">Instagram</p>
+          <a href="https://www.instagram.com/meta.phile" target="_blank" rel="noopener noreferrer">@meta.phile</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-footer-strip">
+      <div>
+        <p class="contact-label" data-i18n="for_projects_label">For projects</p>
+        <p data-i18n="for_projects_text">Commissions, cultural initiatives, learning design, digital platforms, archive storytelling.</p>
+      </div>
+      <div>
+        <p class="contact-label" data-i18n="base_label">Base</p>
+        <p data-i18n="base_text">Hong Kong, with collaboration across local and international contexts.</p>
+      </div>
+      <div>
+        <p class="contact-label" data-i18n="response_label">Response</p>
+        <p data-i18n="response_text">Email is the most reliable channel for detailed collaboration enquiries.</p>
+      </div>
+    </section>
+  </main>
+  <script src="/project-search-index.js?v=20260324-search1"></script>
+  <script src="/project-search-ui.js?v=20260324-search1"></script>
+  <script src="/site-theme.js?v=20260326-mono1"></script>
+  <script src="/contact/contact-i18n.js?v=20260327-i18n1"></script>
+</body>
+</html>

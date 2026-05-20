@@ -1,0 +1,26 @@
+# Dependencies
+gallery-app/node_modules/
+gallery-app/apps/web/node_modules/
+
+# Build output (served from site-root/gallery/ which is synced from /var/www/)
+gallery-app/dist/
+gallery-app/apps/web/dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local env
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

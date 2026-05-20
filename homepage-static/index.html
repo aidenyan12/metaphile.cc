@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>METAPHILE</title>
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('site-theme');
+        if (t === 'light') document.body.setAttribute('data-theme', 'light');
+      } catch(e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="homepage-v9.css?v=20260328-theme-fix1" />
+</head>
+
+<body>
+  <main id="landing" class="landing-shell" aria-label="Service landing page">
+    <div id="viewer-panel" class="viewer-panel" aria-hidden="true">
+      <div class="canvas-wrap">
+        <canvas id="blob-canvas"></canvas>
+      </div>
+    </div>
+
+    <header class="topbar">
+      <a class="brand" href="/">METAPHILE</a>
+      <div class="topbar-actions">
+        <nav class="menu" aria-label="Primary">
+          <a href="/" data-i18n="nav_home">Home</a>
+          <a href="/gallery/" data-i18n="nav_gallery">Gallery</a>
+          <a href="/contact/" data-i18n="nav_contact">Contact</a>
+        </nav>
+        <form class="header-search" action="/gallery/" method="get">
+          <input type="search" name="q" placeholder="Search projects" data-i18n-placeholder="search_placeholder" aria-label="Search projects" />
+          <button type="submit" aria-label="Search gallery">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"></circle>
+              <path d="M16 16L21 21" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+            </svg>
+          </button>
+        </form>
+        <a class="social-link" href="https://www.instagram.com/meta.phile" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"></rect>
+            <circle cx="12" cy="12" r="3.8" fill="none" stroke="currentColor" stroke-width="1.7"></circle>
+            <circle cx="17.4" cy="6.7" r="1.1" fill="currentColor"></circle>
+          </svg>
+        </a>
+        <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch to Chinese">中文</button>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch theme">
+          <span id="theme-icon" aria-hidden="true">☀</span>
+        </button>
+      </div>
+    </header>
+
+    <aside id="model-status" class="model-status">Model: booting script...</aside>
+
+    <section id="s1" class="slide-section" data-index="0">
+      <article class="story-copy is-hero">
+        <p class="eyebrow" data-i18n="eyebrow">We offer solutions for</p>
+        <h1 data-i18n="h1">Cultural Intelligence</h1>
+        <p class="lead" data-i18n="lead1">Digital Presence &amp; Story Architecture: Adaptive content ecosystems designed not just for communication, but for storytelling and resonance.</p>
+        <p class="lead" data-i18n="lead2">Data-Led Decision Systems: Dashboards and analytics that translate complexity into clarity — insight as a visual narrative.</p>
+        <p class="lead" data-i18n="lead3">Secure &amp; Ethical Infrastructure: Cybersecurity frameworks and compliance layers that protect intellectual and creative assets.</p>
+        <a class="service-btn" href="/gallery/" data-i18n="cta_gallery">View Gallery</a>
+      </article>
+    </section>
+
+    <section id="s2" class="slide-section" data-index="1">
+      <article class="story-copy">
+        <h2 data-i18n="h2_s2">Education Technology &amp; Learning Design</h2>
+        <p data-i18n="p1_s2">AI-Enhanced Learning: Intelligent tutors, generative assistants, and recommendation systems that respond to curiosity, not just performance.</p>
+        <p data-i18n="p2_s2">Interactive Visual Learning: 3D, AR, and data visualization that make abstract ideas tangible and relational.</p>
+        <p data-i18n="p3_s2">Learning Analytics &amp; Interpretation: Dashboards that reveal understanding, engagement, and narrative patterns rather than only scores.</p>
+        <a class="service-btn" href="/gallery/" data-i18n="cta_s2">Explore Service</a>
+      </article>
+    </section>
+
+    <section id="s3" class="slide-section" data-index="2">
+      <article class="story-copy">
+        <h2 data-i18n="h2_s3">Research, Archives &amp; Data Aesthetics</h2>
+        <p data-i18n="p1_s3">Computational Humanities Pipelines: Text mining, NLP, and computer vision for cultural collections — analytical yet transparent.</p>
+        <p data-i18n="p2_s3">Semantic &amp; Relational Mapping: Knowledge graphs that reveal unseen constellations between people, artworks, and histories.</p>
+        <p data-i18n="p3_s3">Analytic &amp; Generative Visualization: Interfaces that transform research data into visual essays, exhibitions, and spatial stories.</p>
+        <a class="service-btn" href="/gallery/" data-i18n="cta_s3">Explore Service</a>
+      </article>
+    </section>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span data-i18n="scroll_cue_text">Start scrolling to explore</span>
+      <span class="arrow">↓</span>
+    </div>
+  </main>
+
+  <script src="vendor/three.min.js"></script>
+  <script src="vendor/MTLLoader.js"></script>
+  <script src="vendor/OBJLoader.js"></script>
+  <script src="vendor/FBXLoader.js"></script>
+  <script src="/project-search-index.js?v=20260324-search1"></script>
+  <script src="/project-search-ui.js?v=20260324-search1"></script>
+  <script src="homepage-i18n.js?v=20260327-i18n1"></script>
+  <script src="homepage.js?v=20260326-mono1"></script>
+</body>
+
+</html>
