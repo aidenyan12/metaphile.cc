@@ -33,9 +33,9 @@ body[data-theme="light"] {
   --status-text: #ffffff;
   --cue: #5f5f5f;
   --cue-border: rgba(17, 17, 17, 0.18);
-  --toggle-bg: rgba(17, 17, 17, 0.14);
+  --toggle-bg: rgba(17, 17, 17, 0.22);
   --toggle-fg: #111111;
-  --toggle-border: rgba(17, 17, 17, 0.28);
+  --toggle-border: rgba(17, 17, 17, 0.45);
   --button-bg: #111111;
   --button-fg: #ffffff;
 }
