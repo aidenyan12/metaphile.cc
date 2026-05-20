@@ -44,7 +44,7 @@ const baseProjects = [
     title: 'Metaphile Anchor',
     category: 'Education Technology & Learning Design',
     description: 'An adaptive learning platform for learner-facing analytics, adaptive recommendations, and clearer next-step decisions',
-    image: 'https://images.unsplash.com/photo-1679316481049-4f6549df499f',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
     hashtags: ['edtech', 'adaptive', 'learning', 'analytics', 'pathways'],
   },
   {
@@ -180,11 +180,11 @@ const categoryProfiles = {
     quote: 'Learning interfaces work best when curiosity feels spatial, visual, and alive.',
     focus: ['Learning journeys', 'Interaction design', 'Interpretive clarity'],
     visuals: [
-      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f',
-      'https://images.unsplash.com/photo-1509062522246-3755977927d7',
-      'https://images.unsplash.com/photo-1513258496099-48168024aec0',
-      'https://images.unsplash.com/photo-1503676260728-1c00da094a0b',
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
+      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+      'https://images.unsplash.com/photo-1455390582262-044cdead277a',
       'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e',
+      'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4',
     ],
     background(project) {
       return [
